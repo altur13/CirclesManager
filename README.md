@@ -10,6 +10,6 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/altur13/CirclesManager)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/altur13/CirclesManager)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/altur13/CirclesManager/master)
-![Supported OSs](https://img.shields.io/badge/OS-Linux-white?style=flat)
+![Supported OSs](https://img.shields.io/badge/OS-Linux-red?style=flat)
 
 Local server for managing Osu installations, map repositories etc.
