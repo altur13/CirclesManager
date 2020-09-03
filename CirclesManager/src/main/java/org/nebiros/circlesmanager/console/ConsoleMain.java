@@ -1,6 +1,7 @@
 package org.nebiros.circlesmanager.console;
 
 import org.nebiros.circlesmanager.misc.AppConfig;
+import org.nebiros.circlesmanager.misc.ExternalCmdRunner;
 
 import java.util.Scanner;
 
@@ -30,6 +31,28 @@ public class ConsoleMain
         }
 
         System.out.println("Main Folder: " + config.getRootFolderString());
+
+        System.out.print("Checking for wine presence...");
+        if (!ExternalCmdRunner.isWineInstalled())
+        {
+            System.out.println("\n    Error: wine not found! Please install wine/wine staging first.");
+            return;
+        }
+        else
+        {
+            System.out.println("OK");
+        }
+
+        System.out.print("Checking for winetricks presence...");
+        if (!ExternalCmdRunner.isWinetricksInstalled())
+        {
+            System.out.println("\n    Error: winetricks not found! Please install it using the package manager.");
+            return;
+        }
+        else
+        {
+            System.out.println("OK");
+        }
 
         repl();
     }
